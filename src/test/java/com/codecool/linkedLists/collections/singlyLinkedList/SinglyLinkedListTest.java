@@ -64,7 +64,7 @@ class SinglyLinkedListTest {
 	}
 
 	@Test
-	void testRemoveByIndexFromEmptyLinkedList() {
+	void testRemoveByIndexFromEmptyLinkedListThrowsException() {
 		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
 		
 		assertThrows(IndexOutOfBoundsException.class, () -> {
@@ -75,4 +75,17 @@ class SinglyLinkedListTest {
 		});
 	}
 
+	@Test
+	void testRemoveByIndexFromLinkedList() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		linkedList.add(10);
+		linkedList.add(15);
+		linkedList.add(20);
+		linkedList.removeByIndex(1);
+		
+		assertEquals(2, linkedList.getSize());
+		assertEquals(20, linkedList.get(1));
+		
+	}
 }
