@@ -2,16 +2,16 @@ package com.codecool.linkedLists.collections.singlyLinkedList;
 
 public class Node<T> {
 	private T value;
-	private Node next = null;
+	private Node<T> next = null;
 	
 	public Node(T value) {
 		this.value = value;
 	}
 	
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 	

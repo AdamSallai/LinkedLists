@@ -35,4 +35,15 @@ class SinglyLinkedListTest {
 		assertEquals(10, linkedList.get(0));
 	}
 
+	@Test
+	void testAddMultipleValuesToEmptyLinkedList() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		linkedList.add(10);
+		linkedList.add(15);
+		linkedList.add(20);
+		
+		assertEquals(20, linkedList.get(2));
+	}
+
 }
