@@ -1,6 +1,9 @@
-package com.codecool.linkedLists.collections;
+package com.codecool.linkedLists.collections.singlyLinkedList;
+
+import com.codecool.linkedLists.collections.LinkedList;
 
 public class SinglyLinkedList<T> implements LinkedList<T>{
+	
 
 	public void add(T value) {
 		// TODO Auto-generated method stub
