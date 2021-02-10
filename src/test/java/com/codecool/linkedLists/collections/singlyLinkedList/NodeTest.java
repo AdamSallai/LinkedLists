@@ -14,4 +14,14 @@ class NodeTest {
 		assertEquals("Adam", nameNode.getValue());
 		assertEquals(23, numberNode.getValue());
 	}
+	
+	@Test
+	public void testNodeNext() {
+		Node<String> nameNode = new Node<String>("Adam");
+		Node<Integer> numberNode = new Node<Integer>(23);
+		
+		nameNode.setNext(numberNode);
+		
+		assertEquals(23, nameNode.getNext().getValue());
+	}
 }
