@@ -4,14 +4,20 @@ import com.codecool.linkedLists.collections.LinkedList;
 
 public class SinglyLinkedList<T> implements LinkedList<T>{
 	
+	private int size = 0;
+	private Node<T> head = null;
 
 	public void add(T value) {
-		// TODO Auto-generated method stub
-		
+		if(head == null) {
+			head = new Node<T>(value);
+		}
+		size++;
 	}
 
 	public T get(int index) {
-		// TODO Auto-generated method stub
+		if(size <= index) {
+			throw new IndexOutOfBoundsException();
+		}
 		return null;
 	}
 
@@ -36,8 +42,7 @@ public class SinglyLinkedList<T> implements LinkedList<T>{
 	}
 
 	public int getSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
 }
