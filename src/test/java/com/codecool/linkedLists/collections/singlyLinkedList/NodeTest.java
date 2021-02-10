@@ -23,5 +23,6 @@ class NodeTest {
 		nameNode.setNext(numberNode);
 		
 		assertEquals(23, nameNode.getNext().getValue());
+		assertNull(numberNode.getNext());
 	}
 }
