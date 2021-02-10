@@ -94,8 +94,16 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 	}
 
 	public int indexOf(T value) {
-		// TODO Auto-generated method stub
-		return 0;
+		Node<T> current = head;
+		int i = 0;
+		while(current != null) {
+			if(current.getValue() == value) {
+				return i;
+			}
+			current = current.getNext();
+			i++;
+		}
+		return -1;
 	}
 
 	public int getSize() {
