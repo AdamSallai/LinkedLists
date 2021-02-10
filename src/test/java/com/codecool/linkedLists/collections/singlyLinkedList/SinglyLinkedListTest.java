@@ -46,4 +46,19 @@ class SinglyLinkedListTest {
 		assertEquals(20, linkedList.get(2));
 	}
 
+	@Test
+	void testRemoveElementFromLinkedList() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		linkedList.add(10);
+		linkedList.add(15);
+		linkedList.add(20);
+		linkedList.remove(15);
+		
+		assertEquals(2, linkedList.getSize());
+		assertEquals(20, linkedList.get(1));
+		
+	}
+	
+
 }
