@@ -15,7 +15,7 @@ public class SinglyLinkedList<T> implements LinkedList<T>{
 	}
 
 	public T get(int index) {
-		if(size <= index) {
+		if(size <= index || index < 0) {
 			throw new IndexOutOfBoundsException();
 		}
 		return null;

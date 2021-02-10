@@ -23,4 +23,12 @@ class SinglyLinkedListTest {
 		});
 	}
 
+	@Test
+	void testGetElementWithNegativeIndexThrowsException() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			linkedList.get(-1);
+		});
+	}
 }
