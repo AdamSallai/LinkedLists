@@ -89,4 +89,17 @@ class SinglyLinkedListTest {
 		assertEquals(15, linkedList.get(1));
 		
 	}
+	
+
+	@Test
+	void testContains() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		linkedList.add(10);
+		linkedList.add(15);
+		linkedList.add(20);
+		
+		assertTrue(linkedList.contains(20));
+		assertFalse(linkedList.contains(0));
+	}
 }

@@ -83,7 +83,13 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 	}
 
 	public boolean contains(T value) {
-		// TODO Auto-generated method stub
+		Node<T> current = head;
+		while(current != null) {
+			if(current.getValue() == value) {
+				return true;
+			}
+			current = current.getNext();
+		}
 		return false;
 	}
 
