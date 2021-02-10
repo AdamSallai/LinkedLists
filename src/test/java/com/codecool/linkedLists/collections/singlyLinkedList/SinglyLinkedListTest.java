@@ -102,4 +102,21 @@ class SinglyLinkedListTest {
 		assertTrue(linkedList.contains(20));
 		assertFalse(linkedList.contains(0));
 	}
+
+	@Test
+	void testIndexOf() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		linkedList.add(10);
+		linkedList.add(15);
+		linkedList.add(20);
+		
+		assertEquals(-1, linkedList.indexOf(11));
+		assertEquals(0, linkedList.indexOf(10));
+		assertEquals(2, linkedList.indexOf(20));
+	}
+	
+	
+	
+	
 }
