@@ -11,6 +11,13 @@ public class SinglyLinkedList<T> implements LinkedList<T>{
 		if(head == null) {
 			head = new Node<T>(value);
 		}
+		
+		Node<T> newNode = new Node<T>(value);
+		Node<T> current = head;
+		while(current.getNext() != null) {
+			current = current.getNext();
+		}
+		current.setNext(newNode);
 		size++;
 	}
 
@@ -18,7 +25,13 @@ public class SinglyLinkedList<T> implements LinkedList<T>{
 		if(size <= index || index < 0) {
 			throw new IndexOutOfBoundsException();
 		}
-		return null;
+		Node<T> current = head;
+		int i = 0;
+		while(i != index) {
+			current = current.getNext();
+		}
+		
+		return current.getValue();
 	}
 
 	public void remove(T value) {
