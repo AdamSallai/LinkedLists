@@ -82,10 +82,11 @@ class SinglyLinkedListTest {
 		linkedList.add(10);
 		linkedList.add(15);
 		linkedList.add(20);
-		linkedList.removeByIndex(1);
+		Integer value = linkedList.removeByIndex(2);
 		
+		assertEquals(20, value);
 		assertEquals(2, linkedList.getSize());
-		assertEquals(20, linkedList.get(1));
+		assertEquals(15, linkedList.get(1));
 		
 	}
 }

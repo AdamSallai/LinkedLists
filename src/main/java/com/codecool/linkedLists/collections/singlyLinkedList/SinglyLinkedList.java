@@ -66,7 +66,20 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 		if(size <= index || index < 0) {
 			throw new IndexOutOfBoundsException();
 		}
-		return null;
+		size--;
+		if(index == 0) {
+			T value = head.getValue();
+			head = head.getNext();
+			return value;
+		} else {
+			Node<T> current = head;
+			for (int i = 0; i < index-1; i++) {
+				current = current.getNext();
+			}
+			T value = current.getNext().getValue();
+			current.setNext(current.getNext().getNext());
+			return value;
+		}
 	}
 
 	public boolean contains(T value) {
