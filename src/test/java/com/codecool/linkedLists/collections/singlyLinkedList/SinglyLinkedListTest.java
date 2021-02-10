@@ -57,6 +57,9 @@ class SinglyLinkedListTest {
 		
 		assertEquals(2, linkedList.getSize());
 		assertEquals(20, linkedList.get(1));
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			linkedList.get(2);
+		});
 		
 	}
 	

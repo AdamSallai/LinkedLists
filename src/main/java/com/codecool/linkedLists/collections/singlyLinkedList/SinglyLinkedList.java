@@ -36,8 +36,30 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 	}
 
 	public void remove(T value) {
-		// TODO Auto-generated method stub
-
+		if(head == null) {
+			return;
+		}
+		if(head.getValue() == value) {
+			head = head.getNext();
+			size--;
+		} else {
+			Node<T> current = head;
+			boolean over = false;
+			int i = 0;
+			while (!over && i < size) {
+				if(current.getNext() == null) {
+					over = true;
+				} else if(current.getNext().getValue() == value) {
+					Node<T> nextNode = current.getNext().getNext();
+					current.setNext(nextNode);
+					size--;
+					over = true;
+				} else {
+					current = current.getNext();
+				}
+			}
+		}
+		
 	}
 
 	public T removeByIndex(int index) {
