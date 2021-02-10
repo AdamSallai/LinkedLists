@@ -63,7 +63,9 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 	}
 
 	public T removeByIndex(int index) {
-		// TODO Auto-generated method stub
+		if(size <= index) {
+			throw new IndexOutOfBoundsException();
+		}
 		return null;
 	}
 

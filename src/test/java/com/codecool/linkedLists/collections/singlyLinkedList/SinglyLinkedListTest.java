@@ -62,6 +62,15 @@ class SinglyLinkedListTest {
 		});
 		
 	}
-	
+
+	@Test
+	void testRemovByIndexFromEmptyLinkedList() {
+		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			linkedList.get(0);
+		});
+		
+	}
 
 }
