@@ -111,7 +111,18 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 	}
 
 	public void reverse() {
-		
+		SinglyLinkedList<T> newLinkedList = new SinglyLinkedList<T>();
+		recursiveReverse(newLinkedList, head, size);
+		this.head = newLinkedList.head;
+	}
+
+	private void recursiveReverse(SinglyLinkedList<T> newLinkedList,Node<T> node, int size) {
+		if(size <= 1) {
+			newLinkedList.add(node.getValue());
+		} else {
+			recursiveReverse(newLinkedList, node.getNext(), size-1);
+			newLinkedList.add(node.getValue());
+		}
 	}
 	
 }

@@ -118,12 +118,13 @@ class SinglyLinkedListTest {
 	
 	@Test
 	void testReverse() {
-		LinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
+		SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<Integer>();
 		
 		linkedList.add(10);
 		linkedList.add(15);
 		linkedList.add(20);
 		linkedList.add(25);
+		linkedList.reverse();
 		
 
 		assertEquals(25, linkedList.get(0));
