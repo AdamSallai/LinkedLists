@@ -110,4 +110,8 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
 		return size;
 	}
 
+	public void reverse() {
+		
+	}
+	
 }
